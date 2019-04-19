@@ -5,7 +5,7 @@ const header = props => {
   return <div style={styles.main}>
     {props.profileImage && <div><img style={styles.img} src={props.profileImage} /></div>}
     <span style={styles.text}>
-      <p style={styles.heading}>{props.heading}</p>
+      <p style={styles.heading}>{props.heading} KYLE GOODWIN EDITS TEST</p>
       <p style={styles.subheading}>{props.subheading}</p>
     </span>
   </div>
