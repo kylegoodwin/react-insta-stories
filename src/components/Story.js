@@ -88,7 +88,9 @@ export default class Story extends React.Component {
           <SeeMore action={this.props.action} toggleMore={this.toggleMore} showContent={this.state.showMore} seeMoreContent={this.props.story.seeMore} />
         </div>}
       </div>) : (
+        <Route>
         <Redirect to="/dashboard"/>
+        </Route>
       )}
       </div>
   
