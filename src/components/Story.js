@@ -72,7 +72,7 @@ export default class Story extends React.Component {
 
     return (
       <div>
-     {isLastStory ? (<div style={{...styles.story, width: this.props.width, height: this.props.height}}>
+     {!isLastStory ? (<div style={{...styles.story, width: this.props.width, height: this.props.height}}>
         {type === 'image' ? <img
           style={storyContentStyles}
           src={source}
