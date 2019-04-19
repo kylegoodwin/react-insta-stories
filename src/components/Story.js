@@ -63,8 +63,16 @@ export default class Story extends React.Component {
     let isHeader = typeof this.props.story === 'object' && this.props.story.header
     let type = this.props.story.type === 'video' ? 'video' : 'image'
     let storyContentStyles = this.props.story.styles || this.props.storyContentStyles || styles.storyContent
+    let isLastStory = this.props.story.isLastStory;
+    let redirectComponent = this.props.redirectComponent;
+
+    if( islastStory ){
+      console.log("ISLASTSTORYWORKS");
+    }
+
     return (
-      <div style={{...styles.story, width: this.props.width, height: this.props.height}}>
+      <>
+     {islastStory ? (<div style={{...styles.story, width: this.props.width, height: this.props.height}}>
         {type === 'image' ? <img
           style={storyContentStyles}
           src={source}
@@ -78,7 +86,12 @@ export default class Story extends React.Component {
         <div style={{position: 'absolute', margin: 'auto', bottom: 0, zIndex: 9999, width: '100%'}}>
           <SeeMore action={this.props.action} toggleMore={this.toggleMore} showContent={this.state.showMore} seeMoreContent={this.props.story.seeMore} />
         </div>}
-      </div>
+      </div>) : (
+        <p> Hey </p>
+      )}
+      </>
+  
+
     )
   }
 }

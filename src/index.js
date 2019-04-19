@@ -4,11 +4,17 @@ import PropTypes from 'prop-types'
 
 export default class ReactInstaStories extends Component {
   componentDidMount() {
-    this.props.stories.map(s => {
+    const storiesLength = this.props.stories.length;
+    this.props.stories.map((s,index) => {
       let i = new Image()
       if (!(typeof s === 'object' && s.type === 'video')) {
         i.src = typeof s === 'object' ? s.url : s
       }
+
+      if( index === storiesLength -1){
+        s.isLastStory == false;
+      }
+      
     })
   }
 
