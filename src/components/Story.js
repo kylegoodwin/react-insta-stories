@@ -68,7 +68,7 @@ export default class Story extends React.Component {
     let redirectComponent = this.props.redirectComponent;
 
     if( isLastStory ){
-      console.log("ISLASTSTORYWORKS n");
+      console.log("ISLASTSTORYWORKS new");
     }
 
     return (
@@ -89,7 +89,7 @@ export default class Story extends React.Component {
         </div>}
       </div>) : (
         <Route>
-        <Redirect to="/dashboard"/>
+        <Redirect to="/"/>
         </Route>
       )}
       </div>
