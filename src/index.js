@@ -12,7 +12,7 @@ export default class ReactInstaStories extends Component {
       }
 
       if( index === storiesLength -1){
-        s.isLastStory == false;
+        s.isLastStory == true;
       }
       
     })
