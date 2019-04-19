@@ -67,12 +67,12 @@ export default class Story extends React.Component {
     let redirectComponent = this.props.redirectComponent;
 
     if( isLastStory ){
-      console.log("ISLASTSTORYWORKS");
+      console.log("ISLASTSTORYWORKS n");
     }
 
     return (
       <div>
-     {islastStory ? (<div style={{...styles.story, width: this.props.width, height: this.props.height}}>
+     {isLastStory ? (<div style={{...styles.story, width: this.props.width, height: this.props.height}}>
         {type === 'image' ? <img
           style={storyContentStyles}
           src={source}
