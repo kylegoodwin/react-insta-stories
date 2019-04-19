@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Header from './Header'
 import SeeMore from './SeeMore'
 import globalStyle from './../styles.css'
+import { Route, Redirect } from 'react-router'
 
 export default class Story extends React.Component {
   constructor(props) {
@@ -87,7 +88,7 @@ export default class Story extends React.Component {
           <SeeMore action={this.props.action} toggleMore={this.toggleMore} showContent={this.state.showMore} seeMoreContent={this.props.story.seeMore} />
         </div>}
       </div>) : (
-        <p> Hey </p>
+        <Redirect to="/dashboard"/>
       )}
       </div>
   
