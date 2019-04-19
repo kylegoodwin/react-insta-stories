@@ -66,7 +66,7 @@ export default class Story extends React.Component {
     let isLastStory = this.props.story.isLastStory;
     let redirectComponent = this.props.redirectComponent;
 
-    if( islastStory ){
+    if( isLastStory ){
       console.log("ISLASTSTORYWORKS");
     }
 
